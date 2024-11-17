@@ -1,0 +1,45 @@
+/* index.css or App.css */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #f8b400, #4ecdc4, #5f27cd);
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #fff;
+  color: #222;
+  /* padding: 20px 0; */
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 10s linear infinite; /* Adjust timing for smoothness */
+}
+
+.marquee-text {
+  /* font-size: 2rem; */
+  margin-right: 50px; /* Space between repeated elements */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Start at original position */
+  }
+  100% {
+    transform: translateX(-50%); /* Move to half of the total width to loop */
+  }
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}
